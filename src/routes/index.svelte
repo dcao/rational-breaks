@@ -172,7 +172,7 @@
 </script>
 
 <svelte:head>
-    <title>rational breaks</title>
+    <title>{if (timerState == State.Working ? fmtMs(curWorkMs))} : fmtMs(accRestMs) - rational breaks</title>
 </svelte:head>
 
 <style>
