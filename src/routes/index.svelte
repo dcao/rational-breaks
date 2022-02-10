@@ -55,7 +55,7 @@
         xAxis = d3.axisBottom(xScale);
 
         area1 = d3.area()
-            .curve(d3.curveLinear)
+            .curve(d3.curveMonotoneX)
             .x(i => xScale(chartData[i].time))
             .y0(yScale(0))
             .y1(i => yScale(chartData[i].prop));
